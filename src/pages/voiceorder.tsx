@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import React from 'react'
 import Layout from '../components/Layout'
 import { GetStaticPathsContext } from 'next/types'
@@ -142,11 +143,3 @@ const voiceorder = (props: Props) => {
 
 export default voiceorder
 
-export const getStaticProps = async (ctx:GetStaticPathsContext) => {
-
-    return {
-        props:{
-            data:null
-        }
-    }
-}
