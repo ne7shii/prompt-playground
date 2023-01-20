@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Member } from '../../../config/team'
-import { AiFillFacebook, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillFacebook, AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import Image from 'next/image'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -12,12 +12,15 @@ const Card = (props: Props) => {
     return (
         <div className="p-4 lg:w-1/4 md:w-1/2">
             <div className="h-full flex flex-col items-center text-center">
-                <Image alt={props.data.fullname} width={300}  height={300} className="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4" src={props.data.imageUrl} />
+                <Image alt={props.data.fullname} width={300} height={300} className="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4" src={props.data.imageUrl} />
                 <div className="w-full">
                     <h2 className="title-font font-medium text-lg text-gray-900">{props.data.fullname}</h2>
                     <h3 className="text-gray-500 mb-3">{props.data.role}</h3>
                     <p className="mb-4">{props.data.description}</p>
                     <span className="inline-flex">
+                        {props.data.contact.githubUrl && <a className="text-gray-500" href={props.data.contact.githubUrl} target={"_blank"} rel="noreferrer">
+                            <AiFillGithub size={25} />
+                        </a>}
                         {props.data.contact.linkinUrl && <a className="text-gray-500" href={props.data.contact.linkinUrl} target={"_blank"} rel="noreferrer">
                             <AiFillLinkedin size={25} />
                         </a>}

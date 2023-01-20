@@ -9,6 +9,7 @@ export type Contact = {
     facebookUrl?: string,
     websiteUrl?: string,
     linkinUrl?: string,
+    githubUrl?: string
 }
 export const members: Member[] = [
     {
@@ -19,7 +20,8 @@ export const members: Member[] = [
         contact: {
             facebookUrl: 'https://www.facebook.com/ne7shii',
             websiteUrl: 'https://ne7shii.me',
-            linkinUrl: 'https://www.linkedin.com/in/watcharapong-chaidee-b567a2208/'
+            linkinUrl: 'https://www.linkedin.com/in/watcharapong-chaidee-b567a2208/',
+            githubUrl: 'https://github.com/ne7shii/'
         }
 
     },
@@ -30,7 +32,8 @@ export const members: Member[] = [
         description: 'prompt developer',
         contact: {
             facebookUrl: 'https://www.facebook.com/inbrid',
-            linkinUrl: 'https://www.linkedin.com/in/chonlatid-deerada-74503016b/'
+            linkinUrl: 'https://www.linkedin.com/in/chonlatid-deerada-74503016b/',
+            githubUrl: 'https://github.com/sadin911'
         }
 
     }
