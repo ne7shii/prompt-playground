@@ -4,6 +4,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
 import navigation from '../config/menu'
+import Image from 'next/image'
 
 
 function classNames(...classes: string[]) {
@@ -15,7 +16,7 @@ type Props = {
 export default function Example(props: PropsWithChildren<Props>) {
     const router = useRouter()
     return (
-        <div className='h-screen flex flex-col'>
+        <div className='min-h-screen flex flex-col'>
             <Disclosure as="nav" className="bg-gray-800">
                 {({ open }) => (
                     <>
@@ -34,16 +35,12 @@ export default function Example(props: PropsWithChildren<Props>) {
                                 </div>
                                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                                     <div className="flex flex-shrink-0 items-center">
-                                        <img
-                                            className="block h-8 w-auto lg:hidden"
-                                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                                            alt="Your Company"
+                                        <Image width={37} height={32}
+                                            className="block h-8 w-auto "
+                                            src="/openai.png"
+                                            alt="openai icon"
                                         />
-                                        <img
-                                            className="hidden h-8 w-auto lg:block"
-                                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                                            alt="Your Company"
-                                        />
+
                                     </div>
                                     <div className="hidden sm:ml-6 sm:block">
                                         <div className="flex space-x-4">
@@ -63,7 +60,7 @@ export default function Example(props: PropsWithChildren<Props>) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                                {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                     <button
                                         type="button"
                                         className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -72,7 +69,7 @@ export default function Example(props: PropsWithChildren<Props>) {
                                         <BellIcon className="h-6 w-6" aria-hidden="true" />
                                     </button>
 
-                                    {/* Profile dropdown */}
+                                    
                                     <Menu as="div" className="relative ml-3">
                                         <div>
                                             <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -127,7 +124,7 @@ export default function Example(props: PropsWithChildren<Props>) {
                                             </Menu.Items>
                                         </Transition>
                                     </Menu>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 

@@ -43,7 +43,7 @@ const pure = (props: Props) => {
                             <div className="px-4 sm:px-0">
                                 <h3 className="text-lg font-medium leading-6 text-gray-900">Davinci OpenAI</h3>
                                 <div className="mt-1 text-sm text-gray-600">
-                                    openai using <i>text-davinci-003</i>
+                                    openai using <i>{form.watch('model')}</i>
                                 </div>
 
                             </div>

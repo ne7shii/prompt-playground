@@ -4,7 +4,7 @@ type NavigationItem={
 }
 const navigation : NavigationItem[] = [
     { name: 'Home', href: '/'},
-    { name: 'PurePrompt', href: '/pure'},
+    { name: 'Pure Prompt', href: '/pure'},
     // { name: 'VoiceOrder', href: '/voiceorder' },
     // { name: 'Projects', href: '#', current: false },
     // { name: 'Calendar', href: '#', current: false },
