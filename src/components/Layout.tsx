@@ -16,7 +16,7 @@ type Props = {
 export default function Example(props: PropsWithChildren<Props>) {
     const router = useRouter()
     return (
-        <div className='min-h-screen flex flex-col'>
+        <div className='h-screen flex flex-col'>
             <Disclosure as="nav" className="bg-gray-800">
                 {({ open }) => (
                     <>
@@ -150,7 +150,7 @@ export default function Example(props: PropsWithChildren<Props>) {
                     </>
                 )}
             </Disclosure>
-            <div className='bg-gray-50 p-6 flex justify-center flex-grow overflow-auto'>
+            <div className='bg-gray-100 p-3 lg:p-6 flex justify-center flex-grow overflow-auto'>
                 <div className='container max-w-screen-xl'>
                     {props.children}
                 </div>

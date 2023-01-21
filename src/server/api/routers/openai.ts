@@ -14,7 +14,11 @@ export const openaiRouter = createTRPCRouter({
       const res = await openai.createCompletion({
         model: input.model || "text-davinci-003",
         prompt: `${input.prompt}`,
-        temperature: 0,
+        temperature: 0.7,
+        max_tokens: 256,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0,
       })
       console.log('res', res)
       return {
