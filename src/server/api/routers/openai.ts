@@ -32,5 +32,34 @@ export const openaiRouter = createTRPCRouter({
       return {
         res: models.data
       };
+    }),
+  voiceOrder: publicProcedure
+    .input(z.object({
+      tsCode: z.string(),
+      text: z.string()
+    }))
+    .mutation(async ({ input }) => {
+
+      const fullPrompt = `
+      here is typescript type definition of Menu
+      ${input.tsCode}
+      here is sentence input from user 
+      ${input.text}
+      i want you to turn this sentence into json of type Menu[]
+      `
+      const res = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: `${fullPrompt}`,
+        temperature: 0.7,
+        max_tokens: 256,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0,
+      })
+      console.log('res', res)
+      return {
+        res: res.data.choices[0]?.text,
+        model: res.data.model
+      };
     })
 });
