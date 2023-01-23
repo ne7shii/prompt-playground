@@ -10,7 +10,7 @@ type Props = {
 
 const Card = (props: Props) => {
     return (
-        <div className="p-4 lg:w-1/4 md:w-1/2">
+
             <div className="h-full flex flex-col items-center text-center">
                 <Image alt={props.data.fullname} width={300} height={300} className="flex-shrink-0 rounded-full w-56 h-56 object-cover object-center mb-4" src={props.data.imageUrl} />
                 <div className="w-full">
@@ -37,7 +37,7 @@ const Card = (props: Props) => {
                     </span>
                 </div>
             </div>
-        </div>
+       
     )
 }
 
