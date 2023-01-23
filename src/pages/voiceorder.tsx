@@ -52,7 +52,7 @@ const voiceorder = (props: Props) => {
                             <div className="px-4 sm:px-0">
                                 <h3 className="text-lg font-medium leading-6 text-gray-900">Voice order</h3>
                                 <p className="mt-1 text-sm text-gray-600">
-                                    Order food using voice command
+                                    Transform free text into json data
                                 </p>
                             </div>
                         </div>
@@ -94,9 +94,9 @@ const voiceorder = (props: Props) => {
                                             />
                                             {/* <TsEditor className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"/> */}
                                         </div>
-                                        <p className="mt-2 text-sm text-gray-500">
-                                            Brief description for your profile. URLs are hyperlinked.
-                                        </p>
+                                        {/* <p className="mt-2 text-sm text-gray-500">
+                                            text to transform
+                                        </p> */}
                                     </div>
 
 
